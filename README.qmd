@@ -1,0 +1,213 @@
+---
+title: "Ebike guide"
+number-sections: true
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+# outputs:
+# quarto::quarto_render("README.qmd", output_file = "ebike-guide.docx")
+# Check docx size:
+# fs::file_info("ebike-guide.docx")
+# Copy:
+# file.copy("ebike-guide.docx", "~/Dropbox/Chapeltown\ Cohousing/Environment/travel-plan/ebike-guide.docx", overwrite = TRUE)
+# https://www.dropbox.com/scl/fi/iwvf0v9ydmnif6bk57c8v/ebike-guide.docx?rlkey=mtw3mricrs5zxrrhs6g44pwvy&st=ua46fz8a&dl=0
+# File sizes of images/:
+fs::dir_info("images/")
+# # A tibble: 2 × 18
+#   path         type   size permissions modification_time   user  group device_id
+#   <fs::path>   <fct> <fs:> <fs::perms> <dttm>              <chr> <chr>     <dbl>
+# 1 …paste-1.png file  5.86M rw-rw-r--   2024-08-31 14:05:16 robin robin     66307
+# 2 …paste-2.png file  3.75M rw-rw-r--   2024-08-31 14:24:50 robin robin     66307
+# # Shrink largest:
+# img_1 = magick::image_read("images/paste-1.png")
+# img_1_small = magick::image_resize(img_1, "400x")
+# # Write:
+# magick::image_write(img_1_small, "images/paste-1_small.png")
+# # Check:
+# fs::file_info("images/paste-1_small.png")
+
+# # Same for img_2
+# img_2 = magick::image_read("images/paste-2.png")
+# img_2_small = magick::image_resize(img_2, "400x")
+# magick::image_write(img_2_small, "images/paste-2_small.png")
+# fs::file_info("images/paste-2_small.png")
+```
+
+# Introduction
+
+Chaco has 3 ebikes for communal use.
+These are shown in the photo below which includes:
+
+-   The 'ecargo', for shopping, towing trailers, and longer trips (middle)
+-   The 'efoldy', for short trips (max distance around 10 km) and folding for storage/public transport (right)
+-   The 'Dutch' ebike (name TBC) for general use (left)
+
+[![](images/paste-2_small.png)](https://youtu.be/VrXsrW0D9sc)
+
+The image above was taken form a video (see link below).
+
+# Ecargo
+
+We have a Tern HSD (specifically the Tern HSD P5i Gen.2 Electric Cargo Bike, purchased from [Edinburgh Bike Cooperative](https://www.edinburghbicycle.com/tern-hsd-p5i-gen-2-electric-cargo-bike)) for communal use.
+
+The bike is a 'compact' electric cargo, weighing 27.9 kg (61.5 lb), meaning you may want to avoid steps when using it.
+It has a maximum recommended rider weight of 120 kg (264.6 lb) and a large rear rack capacity of 80 kg.
+It has a 545 Wh battery and a Bosch Performance Line motor, with a range of 51-121 km (32-76 mi).
+See specifications on the [Tern website](https://www.ternbicycles.com/uk/bikes/472/hsd-p5i) for more information.
+
+## Using it
+
+It lives in the 'Gladiator' shed next to the recycling bins.
+To unlock it you need the 2 sets of keys on green fobs.
+These are kept in the key box.
+
+To unlock the bike you need to:
+
+-   Unlock the shed
+-   Unlock the D lock and any other locks on the bike
+-   Unlock the bike-mounted lock on the rear wheel
+
+Note: the bike-mounted lock snaps back when you unlock it.
+You need to push a 'lever' on the other side of the bike to lock it again.
+See video below for a demonstration of how to unlock the bike in the unlisted video at [youtu.be/VrXsrW0D9sc](https://youtu.be/VrXsrW0D9sc).
+
+<!-- https://youtu.be/VrXsrW0D9sc -->
+
+Always lock the bike to a secure object with the grinder-proof 'Litelok' lock that lives inside the panniers, as shown in the photo below (taken from the bike's first utility trip in Chaco).
+
+![](images/paste-1_small.png)
+
+## Charging
+
+If the bike has less than 50% charge after your ride, plug it in to charge after you've finished using it.
+
+## Additional information
+
+<!-- https://www.ternbicycles.com/uk/bikes/472/hsd-p5i -->
+
+-   See the product page on [Tern's website](https://www.ternbicycles.com/uk/bikes/472/hsd-p5i) <!-- https://www.ternbicycles.com/uk/bikes/support/1885/manuals -->
+-   See the manuals for the bike at [Tern's website](https://www.ternbicycles.com/uk/bikes/support/1885/manuals) <!-- https://www.bosch-ebike.com/fileadmin/EBC/Service/Downloads/Bedienungsanleitungen/MY2023/Intuvia100_BHU3200/BHU3200_Intuvia100_MY23_WEU_oReg.pdf?_=1708417638 -->
+-   See the manual for the display at [bosch-ebike.come](https://www.bosch-ebike.com/fileadmin/EBC/Service/Downloads/Bedienungsanleitungen/MY2023/Intuvia100_BHU3200/BHU3200_Intuvia100_MY23_WEU_oReg.pdf?_=1708417638)
+
+</details>
+
+# Bid submission {.appendix}
+
+We could afford the ecargo thanks to funding from the Leeds Community Climate Grant.
+Key bits from the bid submission are below:
+
+<!-- ## Summary -->
+
+Chapeltown Cohousing has substantial experience building sustainable community-led projects.
+Running for more than 20 years, with strong roots in Chapeltown, we have a track record of delivering.
+We successfully navigated the challenges of building 29 sustainable and affordable homes, and have built one of the most diverse and inclusive housing communities in the UK.
+
+We have experience with solar PV and appropriate transport technology.
+We already have 49 kWp of solar PV installed on our south facing roofspace, providing around 1/3rd of our electricity needs, but would like to increase this.
+We have experience getting people to travel in more sustainable ways, with a successful car share meaning that we only need 14 parking spaces for 29 homes.
+We have a well-used e-bike and informally share bikes between ourselves and share our bike riding and maintenance skills with each other and the wider community, with two of our members involved in the Bike Fix Sunday project in Chapeltown, Back Newton Grove, just next to Potternewton Park.
+
+We also have specific experience making use of e-cargo bikes, having borrowed one from Leeds City Council in early 2023, which was used frequently for shopping trips, moving furniture, and other short trips.
+We have learned that this is a popular and useful resource for our community, and we would like to make this a permanent feature of our community.
+
+<!-- ## Overview -->
+
+```{r}
+# Source: https://www.buyabattery.co.uk/battery-chargers/professional-intelligent-battery-chargers/ansmann-energy-16-plus-battery-charger-1001-0004-uk.html
+
+quotes = tibble::tribble(
+  ~Item, ~Cost, ~`Supplier (source of quote)`,
+  "E-cargo bike", 6100, "Local bike shop (Edinburgh Bike Cooperative)",
+  "Tern Clubhouse+ carrier extension", 230, "Local bike shop (Edinburgh Bike Cooperative)",
+  "Tern Sidekick carrier extension", 140, "Local bike shop (Edinburgh Bike Cooperative)",
+  "Tern Storm Box cargo box", 230, "Local bike shop (Edinburgh Bike Cooperative)",
+  "Tern Cargo Lid Lock", 30, "Local bike shop (Edinburgh Bike Cooperative)",
+  "Burley Flatbed Cargo Bike Trailer", 299.98, "Local shop (Decathlon)",
+  "Bike lock (Next Generation Angle-Grinder Resistant Armoured D-Lock)", 149.99, "litelok.com",
+  "Secure storage shed", 2731, "Local supplier (Asgard)",
+  "Battery charger", 94, "Online supplier (buyabattery.co.uk)",
+  "Battery storage system", 3000, "Local solar panel installer (Solar Solutions Ltd TBC)",
+    "PV installation", 2000, "Local solar panel installer (Solar Solutions Ltd TBC)",
+)
+library(scales)
+
+totals_row = quotes |>
+    summarise(Item = "Total", Cost = comma(sum(Cost)), `Supplier (source of quote)` = " ")
+```
+
+```{r}
+txt = "The aims are to:
+
+- Replace short car trips with sustainable e-cargo trips in Leeds
+- Enable people from diverse backgrounds to gain confidence with cycling for everyday trips that require carrying loads
+- Demonstrate how renewable sources of power can combine with emerging sustainable technologies to provide zero-carbon mobility in our Chapeltown Cohousing and the wider community
+
+
+We are seeking funding for:
+
+- An e-cargo bike to facilitate sustainable transportation within our community.
+- A secure storage shed for the e-cargo bike
+- Solar PV panels on the south facing roof of our shared workshop
+- Battery storage system to store electricity to charge the e-cargo bike, other ebikes, tools, batteries and also for garden equipment such as lawnmover and shredder.
+- A smart battery charger for communal use
+
+To assess the demand for an e-cargo bike within Chapeltown Cohousing, we conducted a survey of our community members.
+The results of the survey are shown in the table (see supporting documentation).
+The survey revealed that 14 out of 17 respondents would use an e-cargo bike at least once per month, with 7 respondents indicating that they would use it around once per month, 4 respondents indicating that they would use it 2-3 times per month, and 3 respondents indicating that they would not use it at all (see attached survey results).
+
+This demonstrates a high demand for an e-cargo bike within our community.
+
+We have researched options for e-cargo bikes and have found a suitable model from a local bike shop, Edinburgh Bike Cooperative.
+The Tern GSD S00 is ideal for our community's needs.
+It's cargo and passenger ready, with a rear rack capacity of 200kg, virtually maintenance free Shimano internal gears and Gates belt drive, and a powerful motor that will enable hilly trips to Lidl, Tesco (common trips for our members) or other destinations in Leeds.
+
+The powerful motor will also help members who need to get into town via the new cycle infrastructure on Clay Pit Lane, which has a steep gradient.
+The bike's quality will make it low-maintenance, which is important for our community members who may not have the time or skills to maintain a bike.
+
+The following accessories are also required to get the most out of the e-cargo bike:
+
+- Cargo box, including modular 'Clubhouse+' and 'sidekick' carrier extension: this will allow us to transport groceries, tools, and other items safely and securely.
+- [Cargo box lock](https://www.theelectricbikeshop.co.uk/shop/accessories/sub/cargo-bike-accessories/tern-cargo-lid-lock-for-strorm-box-cargo-lid-17459/option/): to secure the cargo box and its contents.
+- [Cargo bike trailer](https://www.decathlon.co.uk/p/mp/burley/burley-flatbed-cargo-bike-trailer/_/R-p-1e337590-843f-4fd4-9235-864c83debcef): this will allow us to transport larger items, such as furniture, and will be useful for moving items, the flatbed design offering maximum versatility.
+- High quality bike lock: to secure the e-cargo bike when not in use.
+
+We will install additional solar PV panels on the south facing workshop roofspace. This will increase our solar generation capacity, allowing us to generate more clean energy and further reduce our carbon emissions.
+
+We will install a battery storage system to store the excess electricity generated. This will allow us to use the stored energy to charge the e-cargo bike even on cloudy days and overnight.
+
+
+"
+
+n_words = stringr::str_count(txt, "\\S+")
+```
+
+<!-- Current word count: `r n_words + 32` -->
+
+```{r}
+#| output: asis
+# Print the text
+cat(txt)
+```
+
+We are seeking funding for the total project cost of £`r format(sum(quotes$Cost), big.mark = ",")`.
+The breakdown of the budget, including exact quotes from local companies, is provided below.
+
+```{r}
+#| label: tbl-quotes
+#| tbl-cap: "Quotes for Project Costs"
+
+formatted_quotes = quotes |>
+    mutate(Cost = comma(Cost))  # Format Cost column with commas
+
+formatted_quotes |>
+    bind_rows(totals_row) |>
+    knitr::kable()  # Use HTML format for table
+
+```
